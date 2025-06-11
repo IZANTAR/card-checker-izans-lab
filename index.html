@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Verificador y Validador de Tarjeta de Crédito ®️ IZAN'S LAB ®️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">💳 IZAN'S LAB</div>
+    <nav>
+      <a href="#home">Inicio</a>
+      <a href="#features">Características</a>
+      <a href="#api">API</a>
+      <a href="#support">Soporte</a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <h1>El mejor verificador/validador de tarjetas de crédito gratuito de la historia</h1>
+    <h2>Verificador y Validador de Tarjeta de Crédito ®️ 𝙄𝙕𝘼𝙉'𝙎 𝙇𝘼𝘽 ®️</h2>
+
+    <div class="gateway-select">
+      <label>Pasarela Activa:</label>
+      <select id="gateway">
+        <option value="chkr">CHKR Gate</option>
+        <option disabled>Paypal Gate</option>
+        <option disabled>Stripe Gate</option>
+        <option disabled>Braintree Gate</option>
+      </select>
+    </div>
+
+    <textarea id="cc-input" placeholder="Ingresa tarjetas en formato 4242424242424242|12|2025|123"></textarea>
+
+    <div class="controls">
+      <button id="start-btn">Validar</button>
+      <button id="stop-btn">Detener</button>
+    </div>
+
+    <div class="telegram-tag">
+      Grupo Telegram: 💳 ESCUELA BINS Y CCS SOLO AMIGOS 💸
+    </div>
+
+    <div class="counters">
+      <div class="counter live">Live: <span id="live-count">0</span></div>
+      <div class="counter die">Die: <span id="die-count">0</span></div>
+      <div class="counter unknown">Unknown: <span id="unknown-count">0</span></div>
+    </div>
+
+    <div class="results">
+      <h3>Resultados:</h3>
+      <pre id="output"></pre>
+    </div>
+  </main>
+
+  <footer id="support">
+    <p>2025–2026 © Todos los derechos reservados por ®️ 𝙄𝙕𝘼𝙉'𝙎 𝙇𝘼𝘽 ®️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
