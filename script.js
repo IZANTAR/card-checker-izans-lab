@@ -1,4 +1,3 @@
-
 const textarea = document.querySelector("textarea");
 const btnIniciar = document.querySelector(".iniciar");
 const btnDetener = document.querySelector(".detener");
@@ -69,10 +68,10 @@ function crearTarjetaVisual(data) {
     tarjeta.style.padding = "20px";
     tarjeta.style.margin = "10px";
     tarjeta.style.borderRadius = "16px";
-    tarjeta.style.background = "linear-gradient(135deg, #232526, #414345)";
+    tarjeta.style.background = "linear-gradient(135deg, #2c3e50, #4ca1af)";
     tarjeta.style.color = "white";
     tarjeta.style.fontFamily = "monospace";
-    tarjeta.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
+    tarjeta.style.boxShadow = "0 0 12px rgba(0,0,0,0.4)";
     tarjeta.innerHTML = `
         <div style="font-size:18px;font-weight:bold">${data.card}</div>
         <div>💳 ${data.month}/${data.year} &nbsp; CVV: ${data.cvv}</div>
@@ -83,10 +82,12 @@ function crearTarjetaVisual(data) {
         ${data.bin.bandera ? `<img src="${data.bin.bandera}" height="32">` : ""}
     `;
     resultadosDiv.appendChild(tarjeta);
+    resultadosDiv.scrollTop = resultadosDiv.scrollHeight;
 }
 
 function procesarTarjeta(linea) {
     const [cc, mm, yy, cvv] = linea.split("|");
+    if (!cc || !mm || !yy || !cvv) return;
     fetch("https://checker-backend-render.onrender.com/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
