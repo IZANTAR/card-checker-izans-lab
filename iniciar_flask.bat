@@ -1,1 +1,0 @@
-start cmd /k python braintree_api_server/braintree_api_server.py
