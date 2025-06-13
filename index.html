@@ -1,64 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Verificador y Validador de Tarjeta de Crédito ®️ IZAN'S LAB ®️</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IZAN'S LAB - Checker</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo">💳 IZAN'S LAB</div>
-    <nav>
-      <a href="#home">Inicio</a>
-      <a href="#features">Características</a>
-      <a href="#api">API</a>
-      <a href="#support">Soporte</a>
-    </nav>
-  </header>
+  <div class="container">
+    <h1>El mejor verificador/validador de tarjetas de crédito<br>gratuito de la historia</h1>
+    <h2>Verificador y Validador de Tarjeta de Crédito <b>IZAN'S LAB ®</b></h2>
 
-  <main id="home">
-    <h1>El mejor verificador/validador de tarjetas de crédito gratuito de la historia</h1>
-    <h2>Verificador y Validador de Tarjeta de Crédito ®️ 𝙄𝙕𝘼𝙉'𝙎 𝙇𝘼𝘽 ®️</h2>
+    <label for="gateway">Pasarela Activa:</label>
+    <select id="gateway">
+      <option value="braintree">Braintree (Real)</option>
+      <option value="stripe">Stripe Test</option>
+      <option value="paypal">PayPal Test</option>
+      <option value="binlookup">BIN Lookup Only</option>
+      <option value="random">Randomizer</option>
+    </select>
 
-    <div class="gateway-select">
-      <label>Pasarela Activa:</label>
-      <select id="gateway">
-        <option value="chkr">CHKR Gate</option>
-        <option disabled>Paypal Gate</option>
-        <option disabled>Stripe Gate</option>
-        <option disabled>Braintree Gate</option>
-      </select>
+    <textarea id="input" placeholder="Ingresa las tarjetas aquí..."></textarea>
+
+    <div class="button-group">
+      <button id="validateBtn" class="purple-btn">Validar</button>
+      <button id="pauseBtn" class="orange-btn">Pausa</button>
+      <button id="stopBtn" class="red-btn">Detener</button>
     </div>
 
-    <textarea id="cc-input" placeholder="Ingresa tarjetas en formato 4242424242424242|12|2025|123"></textarea>
+    <p><strong>Grupo Telegram:</strong> 🇪🇸 <span style="color:cyan">ESCUELA BINS Y CCS SOLO AMIGOS 🐝</span></p>
 
-    <div class="controls">
-      <button id="start-btn">Validar</button>
-      <button id="stop-btn">Detener</button>
+    <div class="toggle-buttons">
+      <button id="vivasToggle" class="green-btn" onclick="toggleBox('vivasResults')">Vivas: 0</button>
+      <button id="dieToggle" class="red-btn" onclick="toggleBox('dieResults')">Muertas: 0</button>
+      <button id="unknownToggle" class="gold-btn" onclick="toggleBox('unknownResults')">Desconocidas: 0</button>
     </div>
 
-    <div class="telegram-tag">
-      Grupo Telegram: 💳 ESCUELA BINS Y CCS SOLO AMIGOS 💸
-    </div>
+    <div id="vivasResults" class="results-box"></div>
+    <div id="dieResults" class="results-box"></div>
+    <div id="unknownResults" class="results-box"></div>
 
-    <div class="counters">
-      <div class="counter live">Live: <span id="live-count">0</span></div>
-      <div class="counter die">Die: <span id="die-count">0</span></div>
-      <div class="counter unknown">Unknown: <span id="unknown-count">0</span></div>
-    </div>
-
-    <div class="results">
-      <h3>Resultados:</h3>
-      <pre id="output"></pre>
-    </div>
-  </main>
-
-  <footer id="support">
-    <p>2025–2026 © Todos los derechos reservados por ®️ 𝙄𝙕𝘼𝙉'𝙎 𝙇𝘼𝘽 ®️</p>
-  </footer>
+    <button onclick="descargarVivas()" class="purple-btn download-btn">Descargar Vivas</button>
+  </div>
 
   <script src="script.js"></script>
 </body>
