@@ -1,1 +1,0 @@
-# Init for braintree_api_server
