@@ -33,6 +33,6 @@ Proyecto completo para la verificación de tarjetas de crédito desde **terminal
 Este proyecto es **estrictamente educativo**. El uso indebido puede violar leyes locales o los términos de servicios de las APIs utilizadas. El autor **no se responsabiliza** por el uso que se le dé.
 
 ## 👑 Autor
-- Creado por ®️ **IZAN'S LAB®**
+- Creado por ®️ **®IZAN'S LAB®**
 - Grupo Telegram: 💳 ESCUELA BINS Y CCS SOLO AMIGOS 💸
 - Año: 2025
