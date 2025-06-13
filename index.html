@@ -23,7 +23,7 @@
       border-radius: 10px;
       font-family: monospace;
     }
-    .button-group button {
+    .button-group button, .toggle-buttons button {
       margin: 10px;
       padding: 10px 20px;
       font-weight: bold;
@@ -36,6 +36,7 @@
     .red-btn { background-color: #e74c3c; color: white; }
     .green-btn { background-color: #2ecc71; color: white; }
     .gold-btn { background-color: #f1c40f; color: black; }
+    .cyan-text { color: cyan; }
   </style>
 </head>
 <body>
@@ -64,7 +65,10 @@
     <button id="vivasToggle" class="green-btn" onclick="toggleBox('vivasResults')">Vivas: 0</button>
     <button id="dieToggle" class="red-btn" onclick="toggleBox('dieResults')">Muertas: 0</button>
     <button id="unknownToggle" class="gold-btn" onclick="toggleBox('unknownResults')">Desconocidas: 0</button>
+    <button id="downloadBtn" class="green-btn">Descargar Vivas</button>
   </div>
+
+  <p><strong>Grupo Telegram:</strong> <span class="cyan-text">💳 ESCUELA BINS Y CCS SOLO AMIGOS 💸</span></p>
 
   <script src="script.js"></script>
 </body>
