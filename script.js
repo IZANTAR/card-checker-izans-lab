@@ -1,1 +1,1 @@
-console.log('Checker frontend script');
+console.log('Checker cargado correctamente.');
